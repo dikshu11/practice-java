@@ -1,0 +1,41 @@
+/*A prime is a natural number greater than 1
+ that has no positive divisors other than 1 and itself.
+ Given a number,n,determine and print whether it's prime or not .*/
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int n;
+        Scanner scn = new Scanner(System.in);
+        n = scn.nextInt(); 
+        for(int i=0; i<n; i++)
+        {
+            String ans = "Prime";
+            int x = scn.nextInt();
+            if(x==1)
+            {
+                ans = "Not prime";
+            }
+           else
+           {
+                for(int j=2; j<=x/2; j++)
+            {
+                if(x%j == 0)
+                {
+                    ans = "Not prime";
+                    break;
+                }
+            }
+           }
+            System.out.println(ans);
+            
+        }
+        
+    }
+}
